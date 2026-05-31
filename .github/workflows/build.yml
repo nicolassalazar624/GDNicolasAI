@@ -11,8 +11,16 @@ jobs:
     name: Build for Android 64-bit
     steps:
       - uses: actions/checkout@v4
+      
+      # Este paso compila el mod y guarda la referencia en 'id: build'
       - uses: geode-sdk/build-geode-mod@main
+        id: build
         with:
           target: Android64
-          sdk: 'latest'
-          ndk: '21.4.7075529'
+          sdk: '5.7.1'
+      
+      # ⬇️ ¡NUEVO! Este paso es el que sube el archivo .geode como artifact
+      - uses: actions/upload-artifact@v4
+        with:
+          name: GDNicolasAI-geode
+          path: ${{ steps.build.outputs.build-output }}
