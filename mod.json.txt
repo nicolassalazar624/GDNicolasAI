@@ -1,0 +1,11 @@
+{
+  "geode": "v4.0.0",
+  "id": "com.gdnicolas.gdnicolasai",
+  "name": "GDNicolasAI",
+  "version": "1.0.0",
+  "developer": "GDnicolasreal",
+  "description": "the best ai that helps you navigate through gd menu, you can learn how to play too",
+  "gd": {
+    "android": "2.2081"
+  }
+}
